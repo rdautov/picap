@@ -1,0 +1,11 @@
+[Unit]
+Description=Picap Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /home/pi/PiCapExamples/Python/picap-datastream-osc-py/datastream-osc.py -h 192.168.0.52
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
